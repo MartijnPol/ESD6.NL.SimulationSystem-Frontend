@@ -12,9 +12,7 @@ export class CarTrackersComponent implements OnInit {
   @Input() carTrackers: CarTracker[];
 
   constructor(private carTrackerService: CarTrackerService) {
-    this.carTrackerService.getAll().subscribe(trackers => {
-      this.carTrackers = trackers;
-    });
+
   }
 
   ngOnInit() {
