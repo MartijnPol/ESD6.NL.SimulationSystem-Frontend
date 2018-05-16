@@ -1,0 +1,18 @@
+<div class="list-group">
+
+  <div *ngFor="let tracker of carTrackers">
+
+    <div class="list-group-item list-group-item-action flex-column align-items-start car-tracker">
+
+      <div class="d-flex w-100 justify-content-between car-tracker-header">
+        <h5 class="mb-1">
+          <a>{{tracker.id}}</a>
+        </h5>
+        <small>{{tracker.manufacturer}}</small>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

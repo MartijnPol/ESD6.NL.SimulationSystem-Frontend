@@ -1,0 +1,43 @@
+/** CARTRACKERS **/
+
+.list-group {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.list-group-item {
+  border: none;
+  background: white;
+  color: #14171A;
+}
+
+.car-tracker {
+  margin-top: 8px;
+  border-radius: 0;
+}
+
+.car-tracker hr {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.car-tracker-header {
+  margin-bottom: 4px;
+}
+
+h5 a {
+  color: black;
+}
+
+.list-group-item-action:hover {
+  background-color: #F2F6F9;
+}
+
+.list-group-item h5 {
+  font-weight: bold;
+}
+
+.header {
+  background-color: #1DA1F2;
+  font-weight: bold;
+}
