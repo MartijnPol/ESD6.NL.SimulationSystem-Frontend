@@ -1,3 +1,10 @@
-<p>
-  map works!
-</p>
+<agm-map [latitude]="centerLocation.lat" [longitude]="centerLocation.lng" [zoom]="centerZoom">
+
+  <div *ngFor="let tracker of carTrackers">
+    <agm-marker [latitude]="tracker.lastLocation.lat"
+                [longitude]="tracker.lastLocation.lng"
+                [label]="tracker.id">
+    </agm-marker>
+  </div>
+
+</agm-map>

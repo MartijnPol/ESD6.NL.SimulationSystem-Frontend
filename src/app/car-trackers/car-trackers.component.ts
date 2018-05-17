@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {CarTrackerService} from "../../services/car-tracker.service";
-import {CarTracker} from "../../models/CarTracker";
+import {CarTracker} from '../../models/CarTracker';
 
 @Component({
   selector: 'app-car-trackers',
@@ -11,7 +10,7 @@ export class CarTrackersComponent implements OnInit {
 
   @Input() carTrackers: CarTracker[];
 
-  constructor(private carTrackerService: CarTrackerService) {
+  constructor() {
 
   }
 
