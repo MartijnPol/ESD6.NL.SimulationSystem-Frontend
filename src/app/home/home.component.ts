@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   private carTrackers: CarTracker[] = [];
 
   constructor(private carTrackerService: CarTrackerService) {
-    this.webSocket = WebSocketSubject.create('ws://localhost:3500');
+    this.webSocket = WebSocketSubject.create('ws://simulationsystem-backend.herokuapp.com:3500');
 
     this.webSocket
       .subscribe(
