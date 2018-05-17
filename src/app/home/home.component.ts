@@ -10,18 +10,21 @@ import {WebSocketSubject} from 'rxjs/observable/dom/WebSocketSubject';
 })
 export class HomeComponent implements OnInit {
 
+  public carTrackers: CarTracker[] = [];
   private webSocket: WebSocketSubject<string>;
-  private carTrackers: CarTracker[] = [];
 
+  /**
+   * Constructor
+   * @param {CarTrackerService} carTrackerService is the injectec CarTrackerService to get CarTrackers
+   */
   constructor(private carTrackerService: CarTrackerService) {
-    this.webSocket = WebSocketSubject.create('ws://simulationsystem-backend.herokuapp.com:3500');
-
-    this.webSocket
-      .subscribe(
-        () => this.refreshCarTrackers(),
-      );
+    this.webSocket = WebSocketSubject.create('ws://localhost:3500');
+    this.webSocket.subscribe(() => this.refreshCarTrackers());
   }
 
+  /**
+   * Function to refresh the CarTrackers
+   */
   refreshCarTrackers() {
     this.carTrackerService.getAll().subscribe(trackers => {
       this.carTrackers = trackers;

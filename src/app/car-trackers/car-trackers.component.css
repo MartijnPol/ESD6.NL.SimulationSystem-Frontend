@@ -23,9 +23,17 @@
   box-shadow: 0 7px 7px rgba(0, 0, 0, 0.25), 0 3px 3px rgba(0, 0, 0, 0.2);
 }
 
+.md-button.md-fab.md-fab-bottom-right {
+  top: auto;
+  right: 20px;
+  bottom: 20px;
+  left: auto;
+  position: fixed;
+}
+
 .car-tracker hr {
-  margin-top: 4px;
-  margin-bottom: 4px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .delete a {
@@ -35,10 +43,6 @@
 
 h5 a {
   color: black;
-}
-
-.list-group-item-action:hover {
-  background-color: #F3F3F3;
 }
 
 .list-group-item h5 {

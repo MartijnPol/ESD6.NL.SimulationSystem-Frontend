@@ -1,10 +1,14 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
 
 /** GLOBAL STYLE SHEET **/
 
 body {
   font-family: 'Quicksand', sans-serif;
+}
+
+button:focus {
+  outline: 0;
 }
 
 /*button {*/
