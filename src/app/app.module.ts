@@ -15,7 +15,7 @@ import {RestangularModule} from 'ngx-restangular';
 import {AgmCoreModule} from '@agm/core';
 
 export function RestangularConfigFactory(RestangularProvider) {
-  RestangularProvider.setBaseUrl('http://localhost:3000/rest');
+  RestangularProvider.setBaseUrl('https://simulationsystem-backend.herokuapp.com/rest');
 }
 
 @NgModule({

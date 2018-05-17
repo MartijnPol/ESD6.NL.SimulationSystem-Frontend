@@ -1,10 +1,16 @@
 <agm-map [latitude]="centerLocation.lat" [longitude]="centerLocation.lng" [zoom]="centerZoom">
 
   <div *ngFor="let tracker of carTrackers">
-    <agm-marker [latitude]="tracker.lastLocation.lat"
-                [longitude]="tracker.lastLocation.lng"
-                [label]="tracker.id">
-    </agm-marker>
+
+    <div *ngIf="tracker.isDriving">
+
+      <agm-marker [latitude]="tracker.lastLocation.lat"
+                  [longitude]="tracker.lastLocation.lng"
+                  [label]="tracker.id.substring(3, tracker.id.length)">
+      </agm-marker>
+
+    </div>
+
   </div>
 
 </agm-map>
