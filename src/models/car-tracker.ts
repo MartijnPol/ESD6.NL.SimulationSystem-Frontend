@@ -1,4 +1,4 @@
-import {Location} from './Location';
+import {Location} from './location';
 
 /**
  * Class that contains all needed values for the CarTracker object

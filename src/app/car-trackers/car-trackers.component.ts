@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {CarTracker} from '../../models/CarTracker';
+import {CarTracker} from '../../models/car-tracker';
 
 @Component({
   selector: 'app-car-trackers',

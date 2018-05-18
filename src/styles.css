@@ -11,10 +11,12 @@ button:focus {
   outline: 0;
 }
 
-/*button {*/
-/*border-radius: 5px;*/
-/*margin-top: 8px;*/
-/*height: 40px;*/
-/*width: 120px;*/
-/*font-weight: bold;*/
-/*}*/
+/** MATERIAL COLORS OVERRIDE **/
+
+.mat-fab.mat-warn, .mat-mini-fab.mat-warn, .mat-raised-button.mat-warn {
+  background-color: #CC0000;
+}
+
+.mat-fab.mat-primary, .mat-mini-fab.mat-primary, .mat-raised-button.mat-primary {
+  background-color: #039be5;
+}

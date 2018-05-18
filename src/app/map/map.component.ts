@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {CarTracker} from '../../models/CarTracker';
-import {Location} from '../../models/Location';
+import {CarTracker} from '../../models/car-tracker';
+import {Location} from '../../models/location';
 
 @Component({
   selector: 'app-map',

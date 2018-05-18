@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {CarTracker} from '../../models/CarTracker';
+import {CarTracker} from '../../models/car-tracker';
 import {CarTrackerService} from '../../services/car-tracker.service';
 import {WebSocketSubject} from 'rxjs/observable/dom/WebSocketSubject';
 
@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
    * @param {CarTrackerService} carTrackerService is the injectec CarTrackerService to get CarTrackers
    */
   constructor(private carTrackerService: CarTrackerService) {
-    this.webSocket = WebSocketSubject.create('ws://localhost:3500');
+    this.webSocket = WebSocketSubject.create('wss://simulationsystem-backend.herokuapp.com:3500');
     this.webSocket.subscribe(() => this.refreshCarTrackers());
   }
 

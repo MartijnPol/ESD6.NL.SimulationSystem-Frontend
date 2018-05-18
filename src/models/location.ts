@@ -8,3 +8,4 @@ export class Location extends Object {
   }
 
 }
+
