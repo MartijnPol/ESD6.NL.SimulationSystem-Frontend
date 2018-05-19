@@ -8,14 +8,15 @@ import {HomeComponent} from './home/home.component';
 import {MapComponent} from './map/map.component';
 import {CarTrackersComponent} from './car-trackers/car-trackers.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatIconModule} from '@angular/material';
+import {MatButtonModule, MatIconModule, MatDialogModule} from '@angular/material';
 import {CarTrackerService} from '../services/car-tracker.service';
+
 
 import {RestangularModule} from 'ngx-restangular';
 import {AgmCoreModule} from '@agm/core';
 
 export function RestangularConfigFactory(RestangularProvider) {
-  RestangularProvider.setBaseUrl('https://simulationsystem-backend.herokuapp.com/rest');
+  RestangularProvider.setBaseUrl('http://localhost:3000/rest');
 }
 
 @NgModule({
@@ -29,6 +30,7 @@ export function RestangularConfigFactory(RestangularProvider) {
   imports: [
     BrowserAnimationsModule,
     MatIconModule,
+    MatDialogModule,
     MatButtonModule,
     BrowserModule,
     RestangularModule.forRoot(RestangularConfigFactory),

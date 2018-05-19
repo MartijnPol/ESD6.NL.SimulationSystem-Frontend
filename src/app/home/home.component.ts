@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {CarTracker} from '../../models/car-tracker';
 import {CarTrackerService} from '../../services/car-tracker.service';
 import {WebSocketSubject} from 'rxjs/observable/dom/WebSocketSubject';
+import {MatDialog} from '@angular/material';
 
 @Component({
   selector: 'app-home',
@@ -16,9 +17,10 @@ export class HomeComponent implements OnInit {
   /**
    * Constructor
    * @param {CarTrackerService} carTrackerService is the injectec CarTrackerService to get CarTrackers
+   * @param dialog
    */
-  constructor(private carTrackerService: CarTrackerService) {
-    this.webSocket = WebSocketSubject.create('wss://simulationsystem-backend.herokuapp.com:3500');
+  constructor(private carTrackerService: CarTrackerService, private dialog: MatDialog) {
+    this.webSocket = WebSocketSubject.create('ws://localhost:3500');
     this.webSocket.subscribe(() => this.refreshCarTrackers());
   }
 

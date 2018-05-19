@@ -1,0 +1,7 @@
+#floating-add-fab {
+  z-index: 999;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 32px;
+}
