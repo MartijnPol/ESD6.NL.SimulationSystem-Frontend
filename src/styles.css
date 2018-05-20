@@ -22,6 +22,26 @@ button:focus {
 }
 
 .mat-dialog-container {
-  background: #039be5;
+  background: #028bce;
+  color: white;
+}
+
+.mat-dialog-title {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.mat-button {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.mat-form-field-infix {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.mat-input-element {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.mat-form-field-should-float .mat-focused {
   color: white;
 }

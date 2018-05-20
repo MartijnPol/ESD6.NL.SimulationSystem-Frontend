@@ -11,10 +11,12 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatIconModule, MatDialogModule, MatFormFieldModule, MatInputModule} from '@angular/material';
 import {CarTrackerService} from '../services/car-tracker.service';
 
-
 import {RestangularModule} from 'ngx-restangular';
 import {AgmCoreModule} from '@agm/core';
 import {NewCarTrackerDialogComponent} from './new-car-tracker-dialog/new-car-tracker-dialog.component';
+import {ConfirmDialogComponent} from './confirm-dialog/confirm-dialog.component';
+import {RouteDialogComponent} from './route-dialog/route-dialog.component';
+import {FormsModule} from '@angular/forms';
 
 export function RestangularConfigFactory(RestangularProvider) {
   RestangularProvider.setBaseUrl('http://localhost:3000/rest');
@@ -27,13 +29,16 @@ export function RestangularConfigFactory(RestangularProvider) {
     HomeComponent,
     MapComponent,
     CarTrackersComponent,
-    NewCarTrackerDialogComponent
+    NewCarTrackerDialogComponent,
+    ConfirmDialogComponent,
+    RouteDialogComponent
   ],
-  entryComponents: [NewCarTrackerDialogComponent],
+  entryComponents: [NewCarTrackerDialogComponent, ConfirmDialogComponent, RouteDialogComponent],
   imports: [
     BrowserAnimationsModule,
     MatIconModule,
     MatDialogModule,
+    FormsModule,
     MatInputModule,
     MatFormFieldModule,
     MatButtonModule,

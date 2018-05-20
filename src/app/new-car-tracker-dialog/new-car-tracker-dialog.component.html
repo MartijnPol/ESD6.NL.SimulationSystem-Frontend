@@ -1,13 +1,13 @@
-<h1 mat-dialog-title>New CarTracker</h1>
+<h1 mat-dialog-title>Creating a new CarTracker</h1>
 
 <div mat-dialog-content>
 
   <mat-form-field>
-    <input matInput (ngModel)="data.id" placeholder="ID">
+    <input matInput [(ngModel)]="data.id" placeholder="Identifier">
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput (ngModel)="data.manufacturer" placeholder="Manufacturer">
+    <input matInput [(ngModel)]="data.manufacturer" placeholder="Manufacturer">
   </mat-form-field>
 
 </div>

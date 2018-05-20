@@ -6,16 +6,19 @@
 
       <div class="d-flex w-100 justify-content-between car-tracker-header">
         <h5 class="mb-1">
-          <a>Tracker #{{tracker.id}}</a>
+          <a>CarTracker #{{tracker.id}}</a>
         </h5>
       </div>
       <p class="mb-1">Manufacturer: {{tracker.manufacturer}}</p>
       <div *ngIf="tracker.lastLocation.lat">
-        <p class="mb-1">Location: {{tracker.lastLocation.lat}}, {{tracker.lastLocation.lng}}</p>
+        <p class="mb-1">Last location: {{tracker.lastLocation.lat}}, {{tracker.lastLocation.lng}}</p>
       </div>
       <hr>
-      <button mat-mini-fab color="warn">
+      <button (click)="openConfirmDialog(tracker.id)" mat-mini-fab color="warn">
         <mat-icon>remove</mat-icon>
+      </button>
+      <button *ngIf="tracker.isDriving == false" (click)="openNewRouteDialog(tracker.id)" mat-mini-fab color="primary">
+        <mat-icon>near_me</mat-icon>
       </button>
 
     </div>

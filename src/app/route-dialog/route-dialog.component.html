@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>Start a new route for CarTracker #{{data.id}}</h1>
+
+<div mat-dialog-content>
+
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.origin" placeholder="Origin">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.destination" placeholder="Destination">
+  </mat-form-field>
+
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data">Start</button>
+</div>
