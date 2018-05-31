@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
    * @param dialog
    */
   constructor(private carTrackerService: CarTrackerService, private dialog: MatDialog) {
-    this.webSocket = WebSocketSubject.create('ws://localhost:3500');
+    this.webSocket = WebSocketSubject.create('ws://192.168.25.122:8082');
     this.webSocket.subscribe(() => this.refreshCarTrackers());
   }
 
