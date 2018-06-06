@@ -19,7 +19,7 @@ import {RouteDialogComponent} from './route-dialog/route-dialog.component';
 import {FormsModule} from '@angular/forms';
 
 export function RestangularConfigFactory(RestangularProvider) {
-  RestangularProvider.setBaseUrl('http://192.168.25.122:8081/rest');
+  RestangularProvider.setBaseUrl('http://localhost:3000/rest');
 }
 
 @NgModule({

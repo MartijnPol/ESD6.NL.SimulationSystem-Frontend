@@ -13,6 +13,7 @@
       <div *ngIf="tracker.lastLocation.lat">
         <p class="mb-1">Last location: {{tracker.lastLocation.lat}}, {{tracker.lastLocation.lng}}</p>
       </div>
+      <p class="mb-1">Driven: {{tracker.metersDriven / 1000 | number : '1.2-2'}} kilometres</p>
       <hr>
       <button (click)="openConfirmDialog(tracker.id)" mat-mini-fab color="warn">
         <mat-icon>remove</mat-icon>
