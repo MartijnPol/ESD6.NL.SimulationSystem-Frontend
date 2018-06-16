@@ -5,7 +5,8 @@ import {Location} from './location';
  */
 export class CarTracker extends Object {
 
-  constructor(public id?: string, public isDriving?: boolean, public manufacturer?: string, public lastLocation?: Location) {
+  constructor(public id?: string, public isDriving?: boolean, public manufacturer?: string,
+              public lastLocation?: Location, public metersDriven?: number) {
     super();
   }
 
